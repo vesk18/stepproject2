@@ -5,11 +5,12 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm install
-RUN npm install -g pytest  # Install pytest globally
 
 COPY . .
 
 EXPOSE 3000
 
 ENTRYPOINT ["npm"]
+
 CMD ["start"]
+
